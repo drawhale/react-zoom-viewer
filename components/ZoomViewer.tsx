@@ -28,7 +28,7 @@ type Props = {
  * ZoomViewer
  * @description 확대/축소가 가능한 컴포넌트
  * @param isInBounds - 확대/축소 시 화면 밖으로 나가지 않게 할지 여부
- * @param fitOnInit - 화면에 꽉 차게 보이게 할지 여부
+ * @param fitOnInit - 화면에 가득 차게 보이게 할지 여부
  * @param centerOnInit - 화면 중앙에 위치하게 할지 여부
  * @param className - 컴포넌트에 적용할 클래스
  * @param onWheel - 마우스 휠 이벤트 콜백
