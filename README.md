@@ -13,8 +13,40 @@ ZoomViewer* is a React component that enables zoom-in and zoom-out functionality
 
 ## Usage
 
+### ZoomViewer Component
+
 ```
 <ZoomViewer>
- <img src="https://picsum.photos/2000/1000" />
+  <img src="https://picsum.photos/2000/1000" />
 </ZoomViewer>
+```
+
+### useZoomController
+
+```
+const { zoomIn, zoomOut, handleWheel } = useZoomController()
+
+return (
+<div className="flex flex-col gap-[10px]">
+    <div className="flex items-center gap-[10px]">
+    <Button size="S" onClick={zoomIn}>
+        ZoomIn
+    </Button>
+    <Button size="S" onClick={zoomOut}>
+        ZoomOut
+    </Button>
+    </div>
+    <Carousel className="h-[500px] w-[500px]">
+    <ZoomViewer
+        className=" border-light-gray bg-smoke"
+        onWheel={handleWheel}
+    >
+        <img
+        className="object-contain"
+        src="https://fastly.picsum.photos/id/1050/500/300.jpg?hmac=wXLHUriEWa0nDv-NJyzbrZ_FYY7odslz8vgMEYgtRt4"
+        />
+    </ZoomViewer>
+    </Carousel>
+</div>
+)
 ```
